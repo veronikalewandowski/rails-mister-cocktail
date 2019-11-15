@@ -10,7 +10,7 @@
         <tbody>
           <thead>
             <th>Ingredient</th>
-            <th>Description</th>
+            <th>Dose (Description)</th>
             <th>Action</th>
           </thead>
           <% @cocktail.doses.each do |dose| %>
@@ -28,7 +28,7 @@
       </table>
     </div>
     <div class="col-sm-12 col-md-6">
-      <%= render "doses/new", cocktail: @cocktail, dose: @dose %>
+      <%= render "doses/new" %>
     </div>
   </div>
 </div>
