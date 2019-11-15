@@ -1,11 +1,48 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "cocktail-solid.svg" %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", "#", class: "nav-link" %>
+      </li>
+    </ul>
+  </div>
+</div>
 
 
-<h1>Vronki's cocktail book</h1>
-<ul>
-<% @cocktails.each do |cocktail| %>
-  <li><%= link_to cocktail.name, cocktail_path(cocktail[:id]) %>
-<% end %>
-  </li>
-</ul>
+<div class="banner">
+    <h1>Frizzy Mixer</h1>
+    <p>Mix your shit together</p>
+</div>
 
-<%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
+<div class="container">
+  <div class="cocktails-list">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category"><%= cocktail.name %></div>
+      <div class="card-description">
+        <li ><%= link_to cocktail.name, cocktail_path(cocktail[:id]) %></li>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+  </div>
+  <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %>
+  </div>
+
+
+
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
